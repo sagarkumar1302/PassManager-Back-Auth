@@ -15,6 +15,9 @@ app.use(cors())
 app.use('/auth',authRouter )
 app.use('/product',productRoutes )
 app.use('/application',appRoutes )
+app.get("/", (req,res)=>{
+    res.send("hello")
+})
 app.listen(PORT, ()=>{
     console.log(`Server is running on ${PORT}`);
 })
